@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>给你的</title>
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      background:#fff;
+    }
+    .wrap{ text-align:center; padding: 24px; }
+    .txt{ font-size:18px; margin:0 0 14px 0; }
+    audio{
+      width:min(320px, 90vw);
+      height:44px;
+    }
+    .date{ font-size:12px; color:#888; margin-top:12px; }
+  </style>
 </head>
-<body style="text-align:center;margin-top:40vh;">
-  <p style="font-size:20px;">如果你想我了，就点下面</p>
-  <audio controls>
-    <source src="voice.m4a" type="audio/mp4">
-  </audio>
-  <p style="font-size:12px;color:gray;">2026.01.18 - forever</p>
+<body>
+  <div class="wrap">
+    <p class="txt">如果你想我了，就点下面</p>
+    <audio controls preload="metadata">
+      <source src="voice.m4a" type="audio/mp4">
+    </audio>
+    <div class="date">2026.01.18 - forever</div>
+  </div>
 </body>
 </html>
